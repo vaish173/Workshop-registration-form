@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TechTrail 2025 – Workshop Registration Form</title>
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jQuery for validation -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <main class="page-wrap fade-in">
+    <section class="container">
+      <div class="card">
+        <header class="card-header">
+          <h1>TechTrail 2025</h1>
+          <p class="subtitle">Workshop Registration Form</p>
+        </header>
+
+        <form id="registrationForm" action="submit.php" method="POST" novalidate>
+          <div class="form-grid">
+
+            <label class="field">
+              <span>Full Name</span>
+              <input type="text" name="fullname" id="fullname" placeholder="Your full name" required>
+            </label>
+
+            <label class="field">
+              <span>Email ID</span>
+              <input type="email" name="email" id="email" placeholder="you@college.edu" required>
+            </label>
+
+            <label class="field">
+              <span>Phone Number</span>
+              <input type="tel" name="phone" id="phone" placeholder="10-digit mobile" pattern="[0-9]{10}" required>
+            </label>
+
+            <label class="field">
+              <span>College Name</span>
+              <input type="text" name="college" id="college" placeholder="Your college" required>
+            </label>
+
+            <label class="field">
+              <span>Department</span>
+              <input type="text" name="department" id="department" placeholder="CSE / ECE / etc." required>
+            </label>
+
+            <label class="field">
+              <span>Year of Study</span>
+              <select name="year" id="year" required>
+                <option value="">Select year</option>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>Workshop Topic</span>
+              <select name="topic" id="topic" required>
+                <option value="">Choose a topic</option>
+                <option>Web Development</option>
+                <option>AI</option>
+                <option>Cyber Security</option>
+                <option>Cloud Computing</option>
+                <option>IoT</option>
+              </select>
+            </label>
+
+            <fieldset class="field radio-group">
+              <legend>Mode of Participation</legend>
+              <label><input type="radio" name="mode" value="Online" required> Online</label>
+              <label><input type="radio" name="mode" value="Offline"> Offline</label>
+            </fieldset>
+
+            <label class="field textarea">
+              <span>Comments / Expectations</span>
+              <textarea name="comments" id="comments" rows="4" placeholder="What do you hope to learn? (optional)"></textarea>
+            </label>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn-primary" id="submitBtn">Submit Registration</button>
+          </div>
+        </form>
+
+        <footer class="card-footer">
+          <small>Designed by Vaishnavi V – CSE Dept (2025)</small>
+        </footer>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
